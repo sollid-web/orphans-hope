@@ -65,6 +65,35 @@ export default function Home() {
           <p className="text-gray-700 mb-4">Your support helps us provide food, healthcare, and education to children in need. Become a donor or sponsor and change a life today.</p>
           <Link to="/donate" className="btn-green inline-block">Donate or Sponsor Now</Link>
         </section>
+      {/* Reviewers Section */}
+      <section className="max-w-4xl mx-auto py-10">
+        <h2 className="text-2xl font-bold text-green-700 mb-6 text-center">What Our Reviewers Say</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <blockquote className="shadow-card p-6 rounded-xl bg-white">
+            <p className="text-gray-800 italic mb-2">“Orphans Hope sets a new standard for transparency and care. Their programs are truly life-changing.”</p>
+            <footer className="text-green-700 font-semibold">— Dr. A. Singh, Pediatrician & Volunteer Reviewer</footer>
+          </blockquote>
+          <blockquote className="shadow-card p-6 rounded-xl bg-white">
+            <p className="text-gray-800 italic mb-2">“The dedication of staff and volunteers is inspiring. Every donation makes a visible impact.”</p>
+            <footer className="text-green-700 font-semibold">— M. Chen, Social Worker & Community Reviewer</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      {/* Supporters Comments Section */}
+      <section className="max-w-4xl mx-auto py-10">
+        <h2 className="text-2xl font-bold text-green-700 mb-6 text-center">Supporters Comments</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="shadow-card p-6 rounded-xl bg-white">
+            <p className="text-gray-800 mb-2">“I’ve seen firsthand how my sponsorship helps children thrive. Proud to support Orphans Hope!”</p>
+            <footer className="text-green-700 font-semibold">— Sarah M., Monthly Sponsor</footer>
+          </div>
+          <div className="shadow-card p-6 rounded-xl bg-white">
+            <p className="text-gray-800 mb-2">“Orphans Hope is a beacon of hope. Their updates and transparency keep me coming back as a donor.”</p>
+            <footer className="text-green-700 font-semibold">— David L., Donor</footer>
+          </div>
+        </div>
+      </section>
     </motion.div>
   );
 }
