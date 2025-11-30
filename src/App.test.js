@@ -1,8 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders brand name in header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const h1 = screen.getByRole('heading', { level: 1 });
+  expect(h1).toHaveTextContent(/Orphans Hope/i);
+});
+
+test('renders navigation links', () => {
+  render(<App />);
+  expect(screen.getByRole('link', { name: /^Home$/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /^Donate$/i })).toBeInTheDocument();
+});
+
+test('donate route shows wallet labels', async () => {
+  window.history.pushState({}, '', '/donate');
+  render(<App />);
+  expect(await screen.findByText(/Support Orphans Hope/i)).toBeInTheDocument();
+  expect(screen.getByText(/TRC20 Wallet/i)).toBeInTheDocument();
 });
