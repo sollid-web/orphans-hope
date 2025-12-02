@@ -70,8 +70,8 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-green-700 mb-6 text-center">What Our Reviewers Say</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <blockquote className="shadow-card p-6 rounded-xl bg-white">
-            <p className="text-gray-800 italic mb-2">“Orphans Hope sets a new standard for transparency and care. Their programs are truly life-changing.”</p>
-            <footer className="text-green-700 font-semibold">— Dr. A. Singh, Pediatrician & Volunteer Reviewer</footer>
+            <p className="text-gray-800 italic mb-2">"Orphans Hope sets a new standard for transparency and care. Their programs are truly life-changing."</p>
+            <footer className="text-green-700 font-semibold">— Dr. Jenny, Pediatrician & Volunteer Reviewer</footer>
           </blockquote>
           <blockquote className="shadow-card p-6 rounded-xl bg-white">
             <p className="text-gray-800 italic mb-2">“The dedication of staff and volunteers is inspiring. Every donation makes a visible impact.”</p>

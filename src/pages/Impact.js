@@ -7,9 +7,9 @@ export default function Impact() {
 
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <figure className="shadow-card p-5 flex flex-col items-center">
-          <img src="/images/doctor-caring-for-child.jpg" alt="Dr. Singh providing a wellness check for a child" className="rounded-2xl w-full h-64 object-cover mb-4" />
-          <figcaption className="text-lg text-green-700 font-semibold mb-2">Healthcare: Dr. Singh’s Story</figcaption>
-          <p className="text-gray-700">Dr. Singh, our volunteer pediatrician, has provided over 200 wellness checks and vaccinations this year, ensuring every child receives the care they deserve. Her dedication is a cornerstone of our health program.</p>
+          <img src="/images/doctor-caring-for-child.jpg" alt="Dr. Jenny providing a wellness check for a child" className="rounded-2xl w-full h-64 object-cover mb-4" />
+          <figcaption className="text-lg text-green-700 font-semibold mb-2">Healthcare: Dr. Jenny's Story</figcaption>
+          <p className="text-gray-700">Dr. Jenny, our volunteer pediatrician, has provided over 200 wellness checks and vaccinations this year, ensuring every child receives the care they deserve. Her dedication is a cornerstone of our health program.</p>
         </figure>
         <figure className="shadow-card p-5 flex flex-col items-center">
           <img src="/images/children-smiling.jpg" alt="Children smiling outdoors during playtime" className="rounded-2xl w-full h-64 object-cover mb-4" />

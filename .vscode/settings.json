@@ -1,0 +1,4 @@
+{
+    "wallaby.codeLensFeature.debugger": false,
+    "git.ignoreLimitWarning": true
+}
