@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Loading from "./components/Loading";
@@ -16,37 +16,95 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const primaryActions = [
+    { to: "/donate", label: "Donate Now", description: "Fund meals, healthcare, and safe housing." },
+    { to: "/volunteer", label: "Volunteer", description: "Share your time through tutoring or mentorship." },
+    { to: "/programs", label: "Explore Programs", description: "See how we support children daily." },
+    { to: "/impact", label: "Impact Reports", description: "Review our measurable outcomes." },
+  ];
+
+  const supportingLinks = [
+    { to: "/about", label: "About" },
+    { to: "/contact", label: "Contact" },
+    { to: "/faq", label: "FAQ" },
+    { to: "/privacy", label: "Privacy" },
+    { to: "/terms", label: "Terms" },
+  ];
+
   return (
     <Router>
       <div className="font-sans text-gray-800 bg-white min-h-screen flex flex-col">
-        <header className="flex justify-between items-center p-4 shadow-md bg-white sticky top-0 z-50">
-          <h1 className="text-2xl font-bold text-green-700">Orphans Hope</h1>
-          <nav className="space-x-4">
-            <Link to="/" className="hover:text-green-600">
-              Home
-            </Link>
-            <Link to="/about" className="hover:text-green-600">
-              About
-            </Link>
-            <Link to="/programs" className="hover:text-green-600">
-              Programs
-            </Link>
-            <Link to="/impact" className="hover:text-green-600">
-              Impact
-            </Link>
-            <Link to="/donate" className="hover:text-green-600">
-              Donate
-            </Link>
-            <Link to="/contact" className="hover:text-green-600">
-              Contact
-            </Link>
-            <Link to="/volunteer" className="hover:text-green-600">
-              Volunteer
-            </Link>
-            <Link to="/faq" className="hover:text-green-600">
-              FAQ
-            </Link>
-          </nav>
+        <header className="p-4 shadow-md bg-white sticky top-0 z-50">
+          <div className="flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-green-700">Orphans Hope</h1>
+            <nav className="hidden md:flex items-center space-x-4">
+              <Link to="/" className="hover:text-green-600">
+                Home
+              </Link>
+              <Link to="/about" className="hover:text-green-600">
+                About
+              </Link>
+              <Link to="/programs" className="hover:text-green-600">
+                Programs
+              </Link>
+              <Link to="/impact" className="hover:text-green-600">
+                Impact
+              </Link>
+              <Link to="/donate" className="hover:text-green-600">
+                Donate
+              </Link>
+              <Link to="/contact" className="hover:text-green-600">
+                Contact
+              </Link>
+              <Link to="/volunteer" className="hover:text-green-600">
+                Volunteer
+              </Link>
+              <Link to="/faq" className="hover:text-green-600">
+                FAQ
+              </Link>
+            </nav>
+            <button
+              type="button"
+              className="md:hidden border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-semibold"
+              aria-label="Toggle navigation menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              {menuOpen ? "Close Menu" : "Menu"}
+            </button>
+          </div>
+
+          {menuOpen && (
+            <div className="md:hidden mt-4 space-y-6" aria-label="Mobile navigation">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {primaryActions.map((action) => (
+                  <Link
+                    key={action.to}
+                    to={action.to}
+                    className="border rounded-2xl p-4 shadow-card bg-gray-50"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <h3 className="text-lg font-semibold text-green-700 mb-1">{action.label}</h3>
+                    <p className="text-sm text-gray-700">{action.description}</p>
+                  </Link>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {supportingLinks.map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="px-4 py-2 rounded-full border text-sm"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </header>
 
         <main className="flex-grow">
