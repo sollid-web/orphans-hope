@@ -7,7 +7,7 @@ export default function Home() {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <section className="relative h-screen flex items-center justify-center" aria-label="Intro video: Hope Heaven">
         <video
-          src="/videos/hope-heaven-intro.mp4"
+          src="/videos/VID-20251127-WA0007.mp4"
           autoPlay
           muted
           loop
