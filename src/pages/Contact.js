@@ -27,7 +27,7 @@ export default function Contact() {
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
-      <h2 className="text-3xl font-bold text-green-700 mb-6">Contact Us</h2>
+      <h2 className="text-3xl font-bold text-red-700 mb-6">Contact Us</h2>
       <form className="space-y-4" onSubmit={handleSubmit} aria-label="Contact form">
         <label className="block">
           <span className="sr-only">Your Name</span>
@@ -69,12 +69,12 @@ export default function Contact() {
             minLength={10}
           ></textarea>
         </label>
-        <button className="btn-green disabled:opacity-50" type="submit" disabled={status === 'submitting'}>
+        <button className="btn-cta disabled:opacity-50" type="submit" disabled={status === 'submitting'}>
           {status === 'submitting' ? 'Sending...' : 'Send Message'}
         </button>
         <div aria-live="polite" className="text-sm h-6">
-          {status === 'success' && <span className="text-green-600">Message sent successfully!</span>}
-          {status === 'error' && <span className="text-red-600">Failed to send. Try again.</span>}
+          {status === 'success' && <span className="text-red-500">Message sent successfully!</span>}
+          {status === 'error' && <span className="text-red-800">Failed to send. Try again.</span>}
         </div>
       </form>
       <p className="mt-4 text-sm text-gray-600">Email: donate@orphanshope.com</p>

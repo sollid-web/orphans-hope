@@ -36,38 +36,41 @@ export default function App() {
   return (
     <Router>
       <div className="font-sans text-gray-800 bg-white min-h-screen flex flex-col">
-        <header className="p-4 shadow-md bg-white sticky top-0 z-50">
+        <header className="p-4 shadow-md bg-red-700 text-white sticky top-0 z-50">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-green-700">Orphans Hope</h1>
+            <Link to="/" className="flex items-center gap-3" aria-label="Orphans Hope home">
+              <img src="/logo.svg" alt="Orphans Hope logo" className="h-10 w-auto drop-shadow" />
+              <span className="text-2xl font-bold text-white">Orphans Hope</span>
+            </Link>
             <nav className="hidden md:flex items-center space-x-4">
-              <Link to="/" className="hover:text-green-600">
+              <Link to="/" className="hover:text-white/80">
                 Home
               </Link>
-              <Link to="/about" className="hover:text-green-600">
+              <Link to="/about" className="hover:text-white/80">
                 About
               </Link>
-              <Link to="/programs" className="hover:text-green-600">
+              <Link to="/programs" className="hover:text-white/80">
                 Programs
               </Link>
-              <Link to="/impact" className="hover:text-green-600">
+              <Link to="/impact" className="hover:text-white/80">
                 Impact
               </Link>
-              <Link to="/donate" className="hover:text-green-600">
+              <Link to="/donate" className="hover:text-white/80">
                 Donate
               </Link>
-              <Link to="/contact" className="hover:text-green-600">
+              <Link to="/contact" className="hover:text-white/80">
                 Contact
               </Link>
-              <Link to="/volunteer" className="hover:text-green-600">
+              <Link to="/volunteer" className="hover:text-white/80">
                 Volunteer
               </Link>
-              <Link to="/faq" className="hover:text-green-600">
+              <Link to="/faq" className="hover:text-white/80">
                 FAQ
               </Link>
             </nav>
             <button
               type="button"
-              className="md:hidden border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-semibold"
+              className="md:hidden border border-white text-white px-4 py-2 rounded-full text-sm font-semibold"
               aria-label="Toggle navigation menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((prev) => !prev)}
@@ -83,10 +86,10 @@ export default function App() {
                   <Link
                     key={action.to}
                     to={action.to}
-                    className="border rounded-2xl p-4 shadow-card bg-gray-50"
+                    className="rounded-2xl border border-red-100 p-4 shadow-card bg-white text-gray-800"
                     onClick={() => setMenuOpen(false)}
                   >
-                    <h3 className="text-lg font-semibold text-green-700 mb-1">{action.label}</h3>
+                    <h3 className="text-lg font-semibold text-brand-deepRed mb-1">{action.label}</h3>
                     <p className="text-sm text-gray-700">{action.description}</p>
                   </Link>
                 ))}
@@ -96,7 +99,7 @@ export default function App() {
                   <Link
                     key={link.to}
                     to={link.to}
-                    className="px-4 py-2 rounded-full border text-sm"
+                    className="px-4 py-2 rounded-full border border-white/40 text-sm text-white/90"
                     onClick={() => setMenuOpen(false)}
                   >
                     {link.label}
@@ -126,7 +129,7 @@ export default function App() {
           </ErrorBoundary>
         </main>
 
-        <footer className="bg-green-700 text-white text-center p-6 mt-6">
+        <footer className="bg-red-800 text-white text-center p-6 mt-6">
           <div className="space-x-4 mb-2">
             <Link to="/privacy" className="underline">Privacy</Link>
             <Link to="/terms" className="underline">Terms</Link>

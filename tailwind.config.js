@@ -9,9 +9,13 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          green: '#0f6d37',
-          yellow: '#f5b800'
+          red: '#c8102e',
+          deepRed: '#8c1d1d',
+          snow: '#fff5f5'
         }
+      },
+      boxShadow: {
+        card: '0 18px 35px rgba(200, 16, 46, 0.15)'
       }
     },
   },

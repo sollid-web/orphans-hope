@@ -22,7 +22,7 @@ export default class ErrorBoundary extends React.Component {
         <div className="p-8 text-center">
           <h2 className="text-2xl font-bold text-red-600 mb-4">Something went wrong.</h2>
           <p className="text-gray-700 mb-6">Please refresh the page or try again later.</p>
-          <button className="btn-green" onClick={() => window.location.reload()}>Reload</button>
+          <button className="btn-cta" onClick={() => window.location.reload()}>Reload</button>
         </div>
       );
     }

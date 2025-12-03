@@ -6,3 +6,25 @@
 body {
   @apply bg-gray-50 text-gray-800 font-sans;
 }
+
+@layer components {
+  .btn-cta {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white bg-brand-red shadow-card transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-red hover:bg-brand-deepRed;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-semibold border border-white text-white bg-white/10 backdrop-blur-sm transition-all duration-200 hover:bg-white hover:text-brand-red focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent;
+  }
+
+  .cta-grid {
+    @apply grid gap-4 md:gap-6 sm:grid-cols-2;
+  }
+
+  .cta-card {
+    @apply rounded-2xl border border-red-100 bg-white shadow-card p-5 flex flex-col gap-3;
+  }
+
+  .cta-card__title {
+    @apply text-lg font-semibold text-brand-deepRed;
+  }
+}

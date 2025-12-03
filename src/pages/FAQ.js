@@ -3,7 +3,7 @@ import React from 'react';
 export default function FAQ() {
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold text-green-700 mb-6">Frequently Asked Questions</h2>
+      <h2 className="text-3xl font-bold text-red-700 mb-6">Frequently Asked Questions</h2>
       <p className="text-gray-700 mb-6">Find answers to common questions about Orphans Hope, our programs, and how you can get involved.</p>
       
       <div className="space-y-4">
@@ -86,7 +86,7 @@ export default function FAQ() {
       <div className="shadow-card p-6 text-center mt-8">
         <h3 className="text-xl font-semibold mb-2">Still Have Questions?</h3>
         <p className="text-gray-700 mb-4">We're here to help! Contact us and we'll get back to you within 1-2 business days.</p>
-        <a href="/contact" className="btn-green inline-block">Contact Us</a>
+        <a href="/contact" className="btn-cta inline-flex justify-center w-full sm:w-auto">Contact Us</a>
       </div>
     </div>
   );
