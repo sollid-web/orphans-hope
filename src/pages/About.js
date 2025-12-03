@@ -9,6 +9,30 @@ export default function About() {
         <img src="/images/team-photo.jpg" alt="Orphans Hope team members and children" className="rounded-2xl w-full h-96 object-cover mb-6" />
       </div>
 
+      <section className="shadow-card p-6 mb-8" aria-labelledby="about-video-heading">
+        <div className="flex flex-col md:flex-row gap-6 items-center">
+          <video
+            id="about-video"
+            src="/videos/VID-20251006-WA0003.mp4"
+            poster="/images/classroom-activity.jpg"
+            controls
+            playsInline
+            className="rounded-2xl w-full md:w-1/2 shadow-md"
+          >
+            Your browser does not support the video tag.
+          </video>
+          <div className="md:w-1/2">
+            <h3 id="about-video-heading" className="text-2xl font-semibold text-green-700 mb-3">Life Inside Our Edmonton Home</h3>
+            <p className="text-gray-700 mb-3">
+              This short clip captures what a typical afternoon looks like inside Orphans Hope—children collaborating on homework, caregivers preparing evening meals, and volunteers leading music and art therapy.
+            </p>
+            <p className="text-gray-700">
+              We reference this video when talking about our core residential program because it showcases the safe, joyful environment donors and sponsors help us sustain every single day.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <div className="mb-8">
         <h3 className="text-2xl font-semibold text-green-700 mb-4">Our Story</h3>
         <p className="mb-4 text-gray-700 leading-relaxed">

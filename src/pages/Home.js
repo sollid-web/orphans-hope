@@ -14,7 +14,8 @@ export default function Home() {
           playsInline
           preload="metadata"
           poster="/images/children-smiling.jpg"
-          title="A glimpse into daily life at Orphans Hope"
+          title="Morning routines, tutoring, and mealtime inside Orphans Hope"
+          aria-label="Video showing morning routines, tutoring circles, and communal meals inside Orphans Hope"
           className="absolute w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
